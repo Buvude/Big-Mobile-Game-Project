@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class RayCastThroughRenderTexture : MonoBehaviour
 {
+
+   /*if(Input.GetMouseButtonDown(0)) Debug.Log("Pressed left click.");
+   if(Input.GetMouseButtonDown(1)) Debug.Log("Pressed right click.");
+   if(Input.GetMouseButtonDown(2)) Debug.Log("Pressed middle click.");*/
     public Camera cameraZoom;
+    public LayerMask ForCubeFace, Forinteractables;
+    public Collider annoyingBigCollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,26 +20,45 @@ public class RayCastThroughRenderTexture : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        
-        if (Physics.Raycast(ray, out hit))
+        if (Input.GetMouseButton(1))
         {
+            //This is a bad idea... but oh well. I'm deactivating one of the colliders to allow the whole thing to function.
+            annoyingBigCollider.enabled = false;
+
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
             Debug.DrawRay(ray.origin, ray.direction * 20, Color.green);
-            if (hit.collider.tag == "CubeFace1")
+
+            if (Physics.Raycast(ray, out hit,ForCubeFace))
             {
-                Vector2 localPoint = hit.textureCoord;
-                Ray _ray = cameraZoom.ViewportPointToRay(localPoint);
-                RaycastHit _hit;
-                if (Physics.Raycast(_ray, out _hit))
+                print(hit.collider.tag);
+                if (hit.collider.CompareTag("CubeFace1"))
                 {
-                    Debug.DrawRay(_ray.origin, _ray.direction * 20, Color.green);
-                    if (_hit.collider.tag == "dirt")
+                    
+                    Vector2 localPoint = hit.textureCoord2;
+                    print(localPoint);
+                    Ray _ray = cameraZoom.ViewportPointToRay(localPoint);
+                    RaycastHit _hit;
+                    Debug.DrawRay(_ray.origin, _ray.direction * 20, Color.red);
+                    if (Physics.Raycast(_ray, out _hit,Forinteractables))
                     {
-                        print("contacted ");
+                        print("test 3");
+                        
+                        if (_hit.collider.tag == "dirt")
+                        {
+                            print("contacted");
+                        }
                     }
                 }
             }
         }
+        if (Input.GetMouseButtonUp(1))
+        {
+            annoyingBigCollider.enabled = true;
+        }
     }
+       
+    
+
 }

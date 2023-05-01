@@ -24,7 +24,7 @@ public class cubemovment2 : MonoBehaviour
             float mouseY = Input.GetAxis("Mouse Y") * rotationSensitivity;
 
             Quaternion xAxis = Quaternion.AngleAxis(-mouseX, Vector3.up);
-            Quaternion yAxis = Quaternion.AngleAxis(mouseY, Vector3.right);
+            Quaternion yAxis = Quaternion.AngleAxis(-mouseY, Vector3.right);
 
             currentRotation = yAxis * xAxis * currentRotation;
 
