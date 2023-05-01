@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 202656898}
   - component: {fileID: 202656897}
   - component: {fileID: 202656896}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (2)
   m_TagString: CubeFace2
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 511096901}
   - component: {fileID: 511096900}
   - component: {fileID: 511096899}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: CubeFace1
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 817241275}
   - component: {fileID: 817241274}
   - component: {fileID: 817241273}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 819663016}
   - component: {fileID: 819663015}
   - component: {fileID: 819663014}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (4)
   m_TagString: CubeFace2
   m_Icon: {fileID: 0}
@@ -780,7 +780,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0.58, z: -11.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -922,6 +922,10 @@ MonoBehaviour:
   ForCubeFace:
     serializedVersion: 2
     m_Bits: 8
+  Forinteractables:
+    serializedVersion: 2
+    m_Bits: 128
+  annoyingBigCollider: {fileID: 1113401692}
 --- !u!114 &1113401694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -948,7 +952,7 @@ GameObject:
   - component: {fileID: 1369833927}
   - component: {fileID: 1369833926}
   - component: {fileID: 1369833925}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (5)
   m_TagString: CubeFace1
   m_Icon: {fileID: 0}
@@ -1130,7 +1134,7 @@ GameObject:
   - component: {fileID: 1400752870}
   - component: {fileID: 1400752869}
   - component: {fileID: 1400752868}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (1)
   m_TagString: CubeFace3
   m_Icon: {fileID: 0}
@@ -1529,7 +1533,7 @@ GameObject:
   - component: {fileID: 1988847754}
   - component: {fileID: 1988847753}
   - component: {fileID: 1988847752}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (3)
   m_TagString: CubeFace3
   m_Icon: {fileID: 0}
