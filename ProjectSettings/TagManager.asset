@@ -7,6 +7,9 @@ TagManager:
   - CubeFace1
   - CubeFace2
   - CubeFace3
+  - CubeFace4
+  - CubeFace5
+  - CubeFace6
   layers:
   - Default
   - TransparentFX
