@@ -105,14 +105,14 @@ public class GameManager : MonoBehaviour
                 break;
             case faceState.item1Taken://torch taken
                 psCave = faceState.unlocked;
-                CaveSprites[1].enabled = false;
+                CaveSprites[0].enabled = false;
                 break;
             case faceState.item2Taken:
                 psCave = faceState.interaction1Done;
                 CaveSprites[2].enabled = false;
                 break;
             case faceState.interaction1Done://blown up rocks
-                CaveSprites[0].enabled = false;
+                CaveSprites[1].enabled = false;
                 CaveSprites[2].enabled = true;
                 break;
             default:
