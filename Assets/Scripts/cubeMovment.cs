@@ -20,7 +20,7 @@ public class cubeMovment : MonoBehaviour
         {
             turn.x += Input.GetAxis("Mouse X")*rotationSensativity;
             turn.y += Input.GetAxis("Mouse Y")*rotationSensativity;
-            transform.rotation = Quaternion.Euler(-turn.y, turn.x, 0);
+            transform.rotation = Quaternion.Euler(turn.y, -turn.x, 0);
         }
         
     }
