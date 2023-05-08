@@ -1008,7 +1008,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.45
+  m_fontSize: 25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2892,9 +2892,9 @@ MonoBehaviour:
   Shelves: {fileID: 2100000, guid: 86b03063c1c915f4ab4eb2aa5a506773, type: 2}
   Field: {fileID: 2100000, guid: d88a05e672735df40b889384deaecc9c, type: 2}
   Fireplace: {fileID: 2100000, guid: df7ecda0e5dfec44b8c439655378e2a3, type: 2}
-  Cave: {fileID: 2100000, guid: fc20f884c8b53814c9e9c7b55eef7c57, type: 2}
-  Storage: {fileID: 2100000, guid: d1b30125e9827cf499c31b0470351669, type: 2}
-  Trophies: {fileID: 2100000, guid: acb32b83c0e438644a265177066d1267, type: 2}
+  Cave: {fileID: 2100000, guid: 300fc9605cb98c246abc0d4922623678, type: 2}
+  Storage: {fileID: 2100000, guid: b17627b301b18a24287a26726f2cb51d, type: 2}
+  Trophies: {fileID: 2100000, guid: 322e79f8097096e43bb4bf0d85b7478c, type: 2}
   ShelvesSprites:
   - {fileID: 446327141}
   - {fileID: 1005824480}
@@ -3333,7 +3333,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "tap with one finger to select an item in a scene. \ndrag with two fingers
+  m_text: "tap with one finger to select an item in a scene. \ndrag with one  finger
     to rotate the cube"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3361,7 +3361,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17.1
+  m_fontSize: 17.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
