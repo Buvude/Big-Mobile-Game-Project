@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
         caveFS = faceState.locked;
         storageFS = faceState.locked;
         trophiesFS = faceState.locked;
+        updateFaces();
     }
 
     // Update is called once per frame
@@ -78,6 +79,7 @@ public class GameManager : MonoBehaviour
         switch (fireplaceFS)
         {
             case faceState.locked://default state
+                Fireplace.color = Color.black;
                 break;
             case faceState.unlocked://will show the background
                 Fireplace.color = Color.white;
@@ -94,6 +96,7 @@ public class GameManager : MonoBehaviour
         switch (caveFS)
         {
             case faceState.locked://default state
+                Cave.color = Color.black;
                 break;
             case faceState.unlocked://once unlocked these two sprites will render, and background will render
                 Cave.color = Color.white;
@@ -119,6 +122,7 @@ public class GameManager : MonoBehaviour
         switch (storageFS)
         {
             case faceState.locked://default state
+                Storage.color = Color.black;
                 break;
             case faceState.unlocked://when unlocked background will show and sprite will render
                 Storage.color = Color.white;
@@ -135,6 +139,7 @@ public class GameManager : MonoBehaviour
         switch (trophiesFS)
         {
             case faceState.locked://default state
+                Trophies.color = Color.black;
                 break;
             case faceState.unlocked://background will show
                 Trophies.color = Color.white;

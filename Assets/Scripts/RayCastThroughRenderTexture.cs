@@ -39,7 +39,7 @@ public class RayCastThroughRenderTexture : MonoBehaviour
                 print(hit.collider.tag);
                 if (hit.collider.CompareTag("CubeFace1"))
                 {
-                    inv.SelectFace(1); 
+                    inv.SelectFace(1);
                 }
                 else if (hit.collider.CompareTag("CubeFace2"))
                 {
@@ -77,20 +77,39 @@ public class RayCastThroughRenderTexture : MonoBehaviour
                 print(hit.collider.tag);
                 if (hit.collider.CompareTag("CubeFace1"))
                 {
-                    gM.Shelves.color = Color.blue;
+                    inv.SelectFace(1);
+                }
+                else if (hit.collider.CompareTag("CubeFace2"))
+                {
+                    inv.SelectFace(2);
+                }
+                else if (hit.collider.CompareTag("CubeFace3"))
+                {
+                    inv.SelectFace(3);
+                }
+                else if (hit.collider.CompareTag("CubeFace4"))
+                {
+                    inv.SelectFace(4);
+                }
+                else if (hit.collider.CompareTag("CubeFace5"))
+                {
+                    inv.SelectFace(5);
+                }
+                else if (hit.collider.CompareTag("CubeFace6"))
+                {
+                    inv.SelectFace(6);
                 }
             }
-            if (Input.touchCount == 0)
-            {
-                annoyingBigCollider.enabled = true;
-            }
-            if (Input.GetMouseButtonUp(1))
-            {
-                annoyingBigCollider.enabled = true;
-            }
+        }
+        if (Input.touchCount == 0)
+        {
+            annoyingBigCollider.enabled = true;
+        }
+        if (Input.GetMouseButtonUp(1))
+        {
+            annoyingBigCollider.enabled = true;
+        }
 
         }
 
-    }   
-
-}
+    }  
