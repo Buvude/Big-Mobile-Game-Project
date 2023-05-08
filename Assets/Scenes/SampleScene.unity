@@ -1008,7 +1008,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.05
+  m_fontSize: 23.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1288,7 +1288,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883024911}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1819,13 +1819,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d566bb7d31559bc4886e11d2bd344052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inv: {fileID: 1579398008}
+  gM: {fileID: 1576327623}
   cameraZoom: {fileID: 1392907851}
   ForCubeFace:
     serializedVersion: 2
     m_Bits: 8
-  Forinteractables:
-    serializedVersion: 2
-    m_Bits: 128
   annoyingBigCollider: {fileID: 1113401692}
 --- !u!114 &1113401694
 MonoBehaviour:
@@ -1911,7 +1910,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fc20f884c8b53814c9e9c7b55eef7c57, type: 2}
+  - {fileID: 2100000, guid: 28f0c4dacc9508340b33ae3d746d768c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2822,7 +2821,7 @@ GameObject:
   - component: {fileID: 1576327623}
   m_Layer: 0
   m_Name: EventSystem
-  m_TagString: Untagged
+  m_TagString: eventSystem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2889,6 +2888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62ade8b8285b4d428b2a30756ffa88a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inv: {fileID: 1579398008}
   Shelves: {fileID: 2100000, guid: 99817dccffdca044595c6f3546c25328, type: 2}
   Field: {fileID: 2100000, guid: 69c3b68d95572004eb36835291a6a039, type: 2}
   Fireplace: {fileID: 2100000, guid: 8d9e983de3b001148bd7553bde49f843, type: 2}
@@ -2896,8 +2896,8 @@ MonoBehaviour:
   Storage: {fileID: 2100000, guid: d1b30125e9827cf499c31b0470351669, type: 2}
   Trophies: {fileID: 2100000, guid: acb32b83c0e438644a265177066d1267, type: 2}
   ShelvesSprites:
-  - {fileID: 1005824480}
   - {fileID: 446327141}
+  - {fileID: 1005824480}
   - {fileID: 1272726336}
   FieldSprites:
   - {fileID: 631473493}
@@ -2910,8 +2910,10 @@ MonoBehaviour:
   - {fileID: 1269298801}
   - {fileID: 122495788}
   - {fileID: 2114153485}
-  StorageSprites: []
-  TrophiesSprites: []
+  StorageSprites:
+  - {fileID: 928339046}
+  TrophiesSprites:
+  - {fileID: 883024913}
   shelvesFS: 1
   fieldFS: 1
   fireplaceFS: 0
@@ -2954,8 +2956,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.9237501, y: 0.57675}
   m_AnchorMax: {x: 0.975, y: 0.62275004}
-  m_AnchoredPosition: {x: -14.163208, y: 270.3052}
-  m_SizeDelta: {x: 5.6748, y: 14.1636}
+  m_AnchoredPosition: {x: -8.020203, y: 259.45}
+  m_SizeDelta: {x: 17.9609, y: 35.868}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1579398008
 MonoBehaviour:
@@ -2969,7 +2971,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ff1169ac37f554087be7396e5534d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iI: 0
+  currentInventory: 0
+  srList:
+  - {fileID: 21300000, guid: 81b23b6e5294bde4f9ae11fed3300039, type: 3}
+  - {fileID: 21300000, guid: 81b23b6e5294bde4f9ae11fed3300039, type: 3}
+  - {fileID: 21300000, guid: 19f0e8e3334f50442a747a0f6d4ba05b, type: 3}
+  - {fileID: 21300000, guid: 4fc560bfe02462d4fb8550bc0d7c7ad2, type: 3}
+  - {fileID: 21300000, guid: f34a551db14dfa44b96e2521c21082e5, type: 3}
+  - {fileID: 21300000, guid: 7543301e8b445b542954065633330379, type: 3}
+  - {fileID: 21300000, guid: 06da97cdc7167284f9b9a448b7e33810, type: 3}
+  - {fileID: 21300000, guid: 3dff16ede3b95934f8b5a631a252a7ba, type: 3}
+  - {fileID: 21300000, guid: dcc6efab79b614c4482a4c31bb56300a, type: 3}
 --- !u!114 &1579398009
 MonoBehaviour:
   m_ObjectHideFlags: 0

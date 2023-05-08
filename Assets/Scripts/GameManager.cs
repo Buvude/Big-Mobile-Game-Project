@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public Inventory inv;
     public Material Shelves, Field, Fireplace, Cave, Storage, Trophies;
     public enum faceState { locked, unlocked, item1Taken, item2Taken, item3Taken, interaction1Done, interaction2Done, interaction3Done};
     public List<SpriteRenderer> ShelvesSprites = new List<SpriteRenderer>();
@@ -79,6 +80,7 @@ public class GameManager : MonoBehaviour
             case faceState.locked://default state
                 break;
             case faceState.unlocked://will show the background
+                Fireplace.color = Color.white;
                 break;
             case faceState.interaction1Done://place wood
                 FireplaceSprites[0].enabled = true;
@@ -94,6 +96,7 @@ public class GameManager : MonoBehaviour
             case faceState.locked://default state
                 break;
             case faceState.unlocked://once unlocked these two sprites will render, and background will render
+                Cave.color = Color.white;
                 CaveSprites[0].enabled = true;
                 CaveSprites[1].enabled = true;
                 break;
@@ -118,6 +121,7 @@ public class GameManager : MonoBehaviour
             case faceState.locked://default state
                 break;
             case faceState.unlocked://when unlocked background will show and sprite will render
+                Storage.color = Color.white;
                 StorageSprites[0].enabled = true;
                 break;
             case faceState.item1Taken://taken unlit dynamite
@@ -133,6 +137,7 @@ public class GameManager : MonoBehaviour
             case faceState.locked://default state
                 break;
             case faceState.unlocked://background will show
+                Trophies.color = Color.white;
                 break;
             case faceState.interaction1Done://medal placed, game won
                 TrophiesSprites[0].enabled = true;

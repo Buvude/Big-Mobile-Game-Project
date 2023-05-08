@@ -5,7 +5,8 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public enum inventoryItems {nothing, emptyWC, fullWC, axe, pileOfWood, torch, dynamite, litDynamite, dirtyGold, goldMedal  };
-    public inventoryItems iI;
+    public inventoryItems currentInventory;
+    public List<Sprite> srList = new List<Sprite>();
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +17,10 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SelectFace(int faceSelected)
+    {
+
     }
 }

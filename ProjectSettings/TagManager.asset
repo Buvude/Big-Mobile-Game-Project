@@ -10,6 +10,7 @@ TagManager:
   - CubeFace4
   - CubeFace5
   - CubeFace6
+  - eventSystem
   layers:
   - Default
   - TransparentFX
