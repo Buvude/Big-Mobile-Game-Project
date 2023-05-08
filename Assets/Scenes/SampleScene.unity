@@ -2975,7 +2975,7 @@ MonoBehaviour:
   srList:
   - {fileID: 21300000, guid: f9161c6c9e06dc445ada3ee16d991f90, type: 3}
   - {fileID: 21300000, guid: 81b23b6e5294bde4f9ae11fed3300039, type: 3}
-  - {fileID: 21300000, guid: 81b23b6e5294bde4f9ae11fed3300039, type: 3}
+  - {fileID: 21300000, guid: 98bdc70258dfc6d44af5f4b4b692b976, type: 3}
   - {fileID: 21300000, guid: 19f0e8e3334f50442a747a0f6d4ba05b, type: 3}
   - {fileID: 21300000, guid: 4fc560bfe02462d4fb8550bc0d7c7ad2, type: 3}
   - {fileID: 21300000, guid: f34a551db14dfa44b96e2521c21082e5, type: 3}
@@ -3264,7 +3264,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 81b23b6e5294bde4f9ae11fed3300039, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5dd6ff6ce528f524782cdb7f941d63a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
