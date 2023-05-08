@@ -1,20 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class RayCastThroughRenderTexture : MonoBehaviour
 {
-
-   /*if(Input.GetMouseButtonDown(0)) Debug.Log("Pressed left click.");
-   if(Input.GetMouseButtonDown(1)) Debug.Log("Pressed right click.");
-   if(Input.GetMouseButtonDown(2)) Debug.Log("Pressed middle click.");*/
+    private TouchControls touchers;
+    /*if(Input.GetMouseButtonDown(0)) Debug.Log("Pressed left click.");
+    if(Input.GetMouseButtonDown(1)) Debug.Log("Pressed right click.");
+    if(Input.GetMouseButtonDown(2)) Debug.Log("Pressed middle click.");*/
     public Camera cameraZoom;
     public LayerMask ForCubeFace, Forinteractables;
     public Collider annoyingBigCollider;
     // Start is called before the first frame update
     void Start()
     {
-
+        touchers = new TouchControls();
     }
 
     // Update is called once per frame
@@ -38,7 +39,8 @@ public class RayCastThroughRenderTexture : MonoBehaviour
                     
                     Vector2 localPoint = hit.textureCoord2;
                     print(localPoint);
-                    Ray _ray = cameraZoom.ViewportPointToRay(localPoint);
+                    hit.collider.gameObject.GetComponent<Material>().color = Color.blue;
+                   /* Ray _ray = cameraZoom.ViewportPointToRay(localPoint);
                     RaycastHit _hit;
                     Debug.DrawRay(_ray.origin, _ray.direction * 20, Color.red);
                     if (Physics.Raycast(_ray, out _hit,Forinteractables))
@@ -49,7 +51,7 @@ public class RayCastThroughRenderTexture : MonoBehaviour
                         {
                             print("contacted");
                         }
-                    }
+                    }*/
                 }
             }
         }
